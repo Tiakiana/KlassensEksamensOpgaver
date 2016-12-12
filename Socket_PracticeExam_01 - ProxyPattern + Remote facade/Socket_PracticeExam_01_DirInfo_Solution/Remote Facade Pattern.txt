@@ -1,0 +1,15 @@
+Når vi skyder ting over internettet koster hvert eneste kald noget. Ved et remote facade pattern
+kan vi begrænse vores kald ved at samle kaldene i nogle få kald.
+
+Eg.
+SetStreet()
+GetStreet()
+SetAdressNumber()
+GetAddressnumber()
+SetZipCode()
+GetZipCode()
+
+VS
+
+SetAdresse()
+GetAdresse()

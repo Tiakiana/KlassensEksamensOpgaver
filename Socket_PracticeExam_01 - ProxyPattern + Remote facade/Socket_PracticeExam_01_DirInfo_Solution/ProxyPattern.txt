@@ -1,0 +1,8 @@
+Et proxy pattern kan give clienten et interface, som den kan hente ind via en proxyklasse.
+
+Dette sørger for der aldrig kommer til at være en direkte forbindelse mellem klienten og serveren
+
+Herved kan klienten få mulighed for at lave forskellige implementeringer, i stedet for at skulle holde sig
+til.
+
+tænk på Proxy pattern som en facade man løber igennem før, man kan få lov til at få fat i de gode sager fra realklassen.
