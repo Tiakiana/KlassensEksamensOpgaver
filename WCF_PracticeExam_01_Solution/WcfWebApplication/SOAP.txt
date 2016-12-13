@@ -1,0 +1,20 @@
+﻿Simple object access protocol
+
+Det er måden at sende data på. Det fungerer som en slags "konvolut" som pakker dataen ind,
+og sender den mellem services.
+
+Ved SOAP pakker man dataen ind i en hvis struktur, før den kan sendes. Soap tillader kun XML
+
+Restful er den "lette" metode at gøre ovenstående på, men i stedet for en konvulut skal man
+sende hele objekter med i stedet.
+
+Kort sagt:
+Restful sender objekter, hvor soap pakker det ind i sin egen struktur.
+Soap synes at være en smule mere sikker, da det er pakket ind.
+
+Soap har end to end reliability.
+Rest har ikke et communication system, og forventer at klienter klarer kommunikationsfejl,
+ved hjælp af at retry.
+
+
+

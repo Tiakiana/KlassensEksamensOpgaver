@@ -1,0 +1,4 @@
+﻿Web service description language
+præsenteres i XML
+Er et dokument, som beskriver en service. for eksempel en wcf service og hvilke 
+metoder og DTO'er den har.

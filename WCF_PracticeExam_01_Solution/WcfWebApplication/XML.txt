@@ -1,0 +1,14 @@
+﻿Extensible markup language
+Omskriver dataen til et HTML lignende format:
+
+<Personer>
+ <Person>
+   <age>
+     18
+   </age>
+   </Person>
+</Personer>
+
+Dette er en måde at præsentere data på. XML er en stærk måde at repræsentere data på da man kan sætte
+types på.
+De samme tags man har i HTML kan man også bruge i XML.

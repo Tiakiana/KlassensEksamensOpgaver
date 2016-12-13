@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AuctionHouseService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:6739/AuctionHouseService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:6739/AuctionHouseService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:6739/AuctionHouseService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfWebApplication" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAuctionHouseService_GetWares_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWares" />
+  </wsdl:message>
+  <wsdl:message name="IAuctionHouseService_GetWares_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWaresResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuctionHouseService_GetWare_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWare" />
+  </wsdl:message>
+  <wsdl:message name="IAuctionHouseService_GetWare_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWareResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuctionHouseService_GiveBid_InputMessage">
+    <wsdl:part name="parameters" element="tns:GiveBid" />
+  </wsdl:message>
+  <wsdl:message name="IAuctionHouseService_GiveBid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GiveBidResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAuctionHouseService">
+    <wsdl:operation name="GetWares">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuctionHouseService/GetWares" message="tns:IAuctionHouseService_GetWares_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuctionHouseService/GetWaresResponse" message="tns:IAuctionHouseService_GetWares_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWare">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuctionHouseService/GetWare" message="tns:IAuctionHouseService_GetWare_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuctionHouseService/GetWareResponse" message="tns:IAuctionHouseService_GetWare_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GiveBid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuctionHouseService/GiveBid" message="tns:IAuctionHouseService_GiveBid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuctionHouseService/GiveBidResponse" message="tns:IAuctionHouseService_GiveBid_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IAuctionHouseService" type="tns:IAuctionHouseService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetWares">
+      <soap:operation soapAction="http://tempuri.org/IAuctionHouseService/GetWares" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWare">
+      <soap:operation soapAction="http://tempuri.org/IAuctionHouseService/GetWare" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GiveBid">
+      <soap:operation soapAction="http://tempuri.org/IAuctionHouseService/GiveBid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AuctionHouseService">
+    <wsdl:port name="BasicHttpBinding_IAuctionHouseService" binding="tns:BasicHttpBinding_IAuctionHouseService">
+      <soap:address location="http://localhost:6739/AuctionHouseService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
