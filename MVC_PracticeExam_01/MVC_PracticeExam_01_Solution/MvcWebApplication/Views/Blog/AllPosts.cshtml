@@ -1,0 +1,54 @@
+﻿@* Liste over den model som er valgt. i dette tilfælde *@
+@* I tilfælde af at du skal bruge to klasser i viewet er du nødt til at lave en klasse der indeholder referencer til hvad end du skal bruge *@
+@model IEnumerable<MvcWebApplication.Models.BlogPost>
+
+@* Laver en viewbag, som er kan sende ting frem og tilbage mellem view*@
+
+@{
+    ViewBag.Title = "AllPosts";
+}
+@* Header(Overskrift) *@
+
+<h2>AllPosts</h2>
+@* Paragraf med text *@
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    
+@* Table row *@
+    
+    <tr>
+        <th>Author</th>
+        <th>Title</th>
+        <th>Content</th>
+        <th>Date</th>
+    </tr>
+
+    @* Vi entrer nu et foreach lykke som itererer igennem vores liste af objekter.*@
+@foreach (var item in Model)
+{
+    <tr>
+@* Står for Table Dolonner og er kolonner *@
+        <td>@item.Author</td>
+        <td>@item.Title</td>
+        <td>@item.Content</td>
+        <td>@item.CreateDate</td>
+        <td>
+@* følgende er blot links, som man kan følge *@
+@* Disse skal blot slettes i denne opgave *@
+            
+        </td>
+    </tr>
+}
+    
+</table>
+@using (Html.BeginForm())
+{
+    @Html.TextBox("AuthorName");
+    <input type="submit" />
+}
+    
+
+
