@@ -1,0 +1,61 @@
+﻿@model IEnumerable<AuctionWebApplication.AuktionServiceReference.AuctionItem>
+
+@{
+    ViewBag.Title = "SeAlleBud";
+}
+
+<h2>SeAlleBud</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BidCustomName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BidCustomPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BidPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BidTimestamp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ItemDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ItemNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RatingPrice)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BidCustomName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BidCustomPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BidPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BidTimestamp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ItemDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ItemNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RatingPrice)
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuctionWebApplication", "AuctionWebApplication\AuctionWebApplication.csproj", "{D3E66670-20BE-413B-930E-FFE25BADF5E9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4E97CB3B-D5B1-4A1F-9301-A337497FDE75} = {4E97CB3B-D5B1-4A1F-9301-A337497FDE75}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF_AuctionWebApplication", "WCF_AuctionWebApplication\WCF_AuctionWebApplication.csproj", "{4E97CB3B-D5B1-4A1F-9301-A337497FDE75}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D3E66670-20BE-413B-930E-FFE25BADF5E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3E66670-20BE-413B-930E-FFE25BADF5E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3E66670-20BE-413B-930E-FFE25BADF5E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3E66670-20BE-413B-930E-FFE25BADF5E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E97CB3B-D5B1-4A1F-9301-A337497FDE75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E97CB3B-D5B1-4A1F-9301-A337497FDE75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E97CB3B-D5B1-4A1F-9301-A337497FDE75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E97CB3B-D5B1-4A1F-9301-A337497FDE75}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
