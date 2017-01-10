@@ -20,9 +20,9 @@ namespace WcfWebApplication
         public int BidPrice;
         [DataMember]
         public string BidCustomName;
-        [DataMember]
+       // [DataMember]
         public int BidCostumPhone;
-        [DataMember]
+       // [DataMember]
         public DateTime BidTimeStamp;
 
         public AuktionsVare(int itemNumber, string itemDescription, int ratingPrice, int bidPrice, string bidCustomName, int bidCostumPhone, DateTime bidTimeStamp)

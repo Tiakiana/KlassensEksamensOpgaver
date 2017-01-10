@@ -10,9 +10,13 @@ namespace WebApiWebApplication.Models
     {
         
         public static List<Models.AuctionItem> Wares;
+        public static object Key = new object();
 
         public Directory() {
-           
+            lock (Key)
+            {
+
+
                 if (Wares == null)
                 {
 
@@ -27,6 +31,7 @@ namespace WebApiWebApplication.Models
                     Wares.Add(c);
                     Wares.Add(d);
                 }
+            }
         }
     }
 }

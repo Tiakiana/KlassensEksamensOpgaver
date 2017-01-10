@@ -68,7 +68,7 @@ namespace WebApiWebApplication.Controllers
           Ved brug af fiddler:
          
 
-            Sådan sende du et objekt med ind i fiddler.
+            Sådan sender du et objekt med ind i fiddler.
 Header:  
 User-Agent: Fiddler
 Host: localhost:6771
